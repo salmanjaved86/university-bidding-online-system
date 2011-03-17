@@ -1,0 +1,33 @@
+
+==========================================================
+LOG Update of Completed Segments For Members To Keep Track
+==========================================================
+..insert your latest updates on the top
+
+2010-09-19
+-Yew Wei: Added Bootsrap.sql to load data.
+
+2010-09-10
+
+
+
+
+2010-09-07
+
+-Robert: 3rd entry
+-Robert: Insert 2nd entry to show how log should be written.
+-Robert: Initiated lOG file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
