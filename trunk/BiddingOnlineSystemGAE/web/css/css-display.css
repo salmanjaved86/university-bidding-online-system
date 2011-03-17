@@ -1,0 +1,283 @@
+@charset "UTF-8";
+
+/*
+ * @twothreeone - Default Theme
+ * Author: Robert Chai
+ */
+/*****----- Standard Template Layout -----*****/
+* html .hitarea {
+	display: block;
+	float: none;
+}
+
+html {
+	background: #E6E6E6;
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+
+#centerpanel {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+	background-color: #FFFFFF;
+	top: 10px;
+	left: 0px;
+	width: 988px;
+	min-height: 580px;
+}
+
+#displayleftpane {
+	position: relative;
+	top: 10px;
+	left: 0px;
+	width: 200px;
+}
+
+#edolllars {
+	position: relative;
+	top: 10px;
+	left: 42px;
+	padding-left: 22px;
+	font-family: Verdana, Arial;
+	font-size: 35px;
+	color: #005B90;
+	text-align: left;
+	letter-spacing: -2px;
+}
+
+#edolllarscurrency {
+	position: absolute;
+	top: 8px;
+	left: 0px;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0px;
+}
+
+#accounttotaltext,#currentroundtext,#bidroundstatustext {
+	background-color: #005B90;
+	padding-left: 66px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: left;
+}
+
+#accounttotaltext {
+	margin-top: 5px;
+}
+
+#roundnumber {
+	padding-left: 65px;
+	margin-bottom: -5px;
+	font-family: Verdana, Arial;
+	font-size: 35px;
+	color: #005B90;
+	text-align: left;
+	letter-spacing: -2.5px;
+}
+
+#bidroundstatustext {
+	margin-top: 5px;
+}
+
+#bidroundstatus {
+	padding-left: 65px;
+	margin-top: 5px;
+	margin-bottom: -5px;
+	font-family: Verdana, Arial;
+	font-size: 26px;
+	font-variant: small-caps;
+	color: #005B90;
+	text-align: left;
+	letter-spacing: -2.2px;
+}
+
+#displayfloattop {
+	position: absolute;
+	top: 5px;
+	left: 180px;
+}
+
+#displaytoprightpane {
+	position: absolute;
+	top: 14px;
+	left: 235px;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+
+#nametext {
+	position: absolute;
+	top: 1px;
+	left: 435px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	width: 145px;
+}
+
+#links {
+	position: relative;
+	top: 0px;
+	left: 585px;
+	font-weight: bold;
+}
+
+#links a,#links a:active,#links a:visited {
+	color: #197DDB;
+}
+
+#displaybottomrightpane {
+	position: relative;
+	top: 0px;
+	left: 220px;
+	margin-top: -116px;
+	padding-left: 40px;
+	padding-right: 40px;
+	width: 688px;
+	height: auto;
+	text-align: left;
+}
+
+#displayallmods {
+	position: absolute;
+	top: 45px;
+	left: 275px;
+}
+
+#displayallmodstext a,#displayallmodstext a:active,#displayallmodstext a:visited
+	{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding-top: 7px;
+	color: #FFFFFF;
+	font-size: 10px;
+	font-weight: bold;
+	width: 160px;
+	height: 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#displayallmodstext a:hover {
+	color: #FFFF00;
+}
+
+#biddedtimetable {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	font-family: Arial, Verdana;
+	font-size: 16px;
+	width: 672px;
+}
+
+#biddedtimetableheader {
+	position: relative;
+	top: 2px;
+	left: 0px;
+	width: 320px;
+	height: 25px;
+}
+
+#addbidbtn {
+	position: absolute;
+	top: 26px;
+	left: 558px;
+}
+
+#addbidbtn a,#addbidbtn a:active,#addbidbtn a:visited {
+	border: none;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+#addbidbtncss:hover {
+	background-color: #00DD00;
+}
+
+#addbidbtncss {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #197DDB;
+	border: none;
+	background-color: #006600;
+	font-variant: small-caps;
+	padding: 10px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.errorMessage {
+	position: absolute;
+	top: 5px;
+	left: 400px;
+	font-family: Arial, Verdana;
+	font-size: 16px;
+	list-style-type: none;
+}
+
+.actionMessage {
+	font-family: Arial, Verdana;
+	font-size: 14px;
+}
+
+#displayfloatlogo {
+	position: absolute;
+	top: 342px;
+	left: 92px;
+}
+
+#displayfloatbottom {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#bidconfirmed {
+	color: #006600;
+}
+
+#bidinprogress {
+	color: #000000;
+}
+
+.success {
+	color: #006600;
+}
+
+.failure {
+	color: #FF0000;
+}
+
+#bidlegend {
+	position: relative;
+	top: 16px;
+	left: 0px;
+	padding-top: 4px;
+	padding-left: 6px;
+	border-top: 1px #000000 solid;
+	font-size: 0.8em;
+	font-variant: small-caps;
+}
+
+#bidsuccess {
+	color: #006600;
+}
+
+#bidprogress {
+	color: #000000;
+}

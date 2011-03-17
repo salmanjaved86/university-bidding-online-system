@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*
+ * @twothreeone - Default Theme
+ * Author: Robert Chai
+ */
+/*****----- Standard Template Layout -----*****/
+#viewallpanel {
+	text-align: center;
+}
+
+.day {
+	background-color: #dbe7ec;
+}
+
+.strong {
+	font-weight: bolder;
+}
+
+td {
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+}
+
+table {
+	margin-top: -8px;
+	margin-bottom: 10px;
+	width: 672px;
+	float: none;
+	border: 3px solid #999999;
+	font-family: Verdana, Arial;
+	font-size: 0.7em;
+}
+
+.light {
+	color: #93A2D9;
+}
+
+#actionMessages {
+	padding: 20px;
+	border: 1px solid green;
+}
+
+.drop:hover {
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+#tableheader {
+	position: relative;
+	top: 5px;
+	left: 0px;
+	font-family: Verdana, Arial;
+	font-size: 40px;
+	font-weight: bold;
+	color: #999999;
+	text-align: left;
+	text-transform: lowercase;
+	letter-spacing: -2.0px;
+}
+
+#addbidlink,#addbidlink a:active,#addbidlink a:visted {
+	color: #197DDB;
+	text-decoration: none;
+}
+
+#addbidlink a:hover {
+	color: #197DDB;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="BiddingOnlineSystem" extends="struts-default">
+		<action name="entername">
+			<result>nameinput.jsp</result>
+		</action>
+
+		<action name="login">
+			<result>login.jsp</result>
+		</action>
+
+		<action name="authenticate" class="bios.Authenticate">
+			<result>home.jsp</result>
+		</action>
+
+
+		<action name="sayhello" class="bios.Hello">
+			<result name="input">nameinput.jsp</result>
+			<result>response.jsp</result>
+		</action>
+
+		<action name="bootstrap" class="bios.Bootstrap">
+			<!--<result name="bootstrap">bootstrap.jsp</result> -->
+			<result>bootstrap.jsp</result>
+			<result name="success">bootstrap.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

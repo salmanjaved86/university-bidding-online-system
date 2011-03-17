@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+
+	<package name="BiddingOnlineSystem" namespace="/" extends="struts-default">
+
+		<global-results>
+			<result name="error">/Error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+		<action name="loginView">
+			<result>/login.jsp</result>
+		</action>
+
+
+		<action name="login" class="bios.LoginAction">
+			<!-- Login redirect for ADMIN account(s) -->
+			<result name="ADMIN" type="redirect">/admin/adminView.action</result>
+			<!-- Login redirect for STUDENT account(s) -->
+			<result name="STUDENT" type="redirect">/secure/display.action</result>
+
+			<!-- Login redirect for standard error checks) -->
+			<result name="SUCCESS" type="redirectAction">
+				<param name="actionName">loginView.action</param>
+				<param name="errorMessage">${errorMessage}</param>
+			</result>
+		</action>
+
+
+		<action name="round" class="bios.RoundURLAction">
+			<result name="SUCCESS">/round.jsp</result>
+		</action>
+
+		<action name="bid_status" class="bios.BidStatusURLAction">
+			<result name="SUCCESS">/bid_status.jsp</result>
+		</action>
+
+		<action name="bid" class="bios.AddBidURLAction">
+			<result name="SUCCESS">/bidResult.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="BiddingOnlineSystemSecure" namespace="/secure"
+		extends="struts-default">
+		<interceptors>
+
+			<interceptor name="authenticationInterceptor" class="bios.AuthenticationInterceptor" />
+
+			<interceptor-stack name="secureStack">
+				<interceptor-ref name="authenticationInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+
+		</interceptors>
+		<default-interceptor-ref name="secureStack" />
+
+		<global-results>
+			<result name="login" type="redirect">/loginView.action</result>
+			<result name="error">/Error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+		<action name="display">
+			<result>/display.jsp</result>
+		</action>
+
+		<action name="viewCourses" class="bios.ViewCourses">
+			<result name="SUCCESS">/viewCoursesResult.jsp</result>
+		</action>
+
+		<action name="viewBids" class="bios.ViewBids">
+			<result name="SUCCESS">/viewBidsResult.jsp</result>
+		</action>
+
+		<action name="viewSections" class="bios.ViewSections">
+			<result name="SUCCESS">/viewSections.jsp</result>
+			<result name="input">/addBid.jsp</result>
+		</action>
+
+		<action name="editBid" class="bios.EditBid">
+			<result name="SUCCESS">/display.jsp</result>
+			<result name="input">/debug.jsp</result>
+		</action>
+
+		<action name="editBidView" class="bios.EditBidView">
+			<result name="SUCCESS">/editBid.jsp</result>
+		</action>
+
+		<action name="addBid" class="bios.AddBid">
+			<result name="SUCCESS" type="redirect">/secure/display.action</result>
+			<result name="input">/debug.jsp</result>
+		</action>
+
+		<action name="dropBid" class="bios.DropBid">
+			<result name="SUCCESS">/ajaxBidResult.jsp</result>
+		</action>
+
+		<action name="autocompleter" class="bios.AjaxCourse">
+			<result name="success">/ajaxCourseSearch.jsp</result>
+		</action>
+
+		<action name="sections" class="bios.AjaxSections">
+			<result name="success">/ajaxSectionsReturn.jsp</result>
+		</action>
+
+		<action name="bids" class="bios.AjaxBids">
+			<result name="input">/ajaxBidResult.jsp</result>
+			<result name="success">/ajaxBidResult.jsp</result>
+		</action>
+
+		<action name="updateEDollar" class="bios.UpdateEdollar">
+			<result name="SUCCESS">/ajaxBidResult.jsp</result>
+		</action>
+
+		<action name="edit" class="bios.AjaxEdit">
+			<result name="input">/ajaxBidResult.jsp</result>
+			<result name="SUCCESS">/ajaxBidResult.jsp</result>
+		</action>
+
+		<action name="viewSearch">
+			<result>/viewCourseSearch.jsp</result>
+		</action>
+
+		<action name="courseSearch" class="bios.CourseSearchAction">
+			<result name="SUCCESS">/viewCourseSearch.jsp</result>
+		</action>
+
+		<action name="logout" class="bios.LogoutAction">
+			<result name="SUCCESS" type="redirect">/loginView.action</result>
+		</action>
+	</package>
+
+	<package name="Administration" extends="struts-default"
+		namespace="/admin">
+		<interceptors>
+
+			<interceptor name="authenticationInterceptor" class="bios.AuthenticationInterceptor" />
+
+			<!--<interceptor-stack name="secureStack"> <interceptor-ref name="authenticationInterceptor"/> 
+				<interceptor-ref name="defaultStack"/> </interceptor-stack> -->
+
+			<interceptor name="gaeFileUploadInterceptor"
+				class="com.struts2.gae.interceptor.GaeFileUploadInterceptor" />
+			<interceptor-stack name="fileUploadStack">
+				<interceptor-ref name="gaeFileUploadInterceptor"></interceptor-ref>
+				<interceptor-ref name="basicStack"></interceptor-ref>
+				<interceptor-ref name="authenticationInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+
+		</interceptors>
+		<!-- <default-interceptor-ref name="secureStack"/> -->
+		<default-interceptor-ref name="fileUploadStack" />
+
+		<global-results>
+			<result name="login" type="redirect">/loginView.action</result>
+			<result name="error">/Error.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="error" />
+		</global-exception-mappings>
+
+		<action name="adminView">
+			<result>/adminConsole.jsp</result>
+		</action>
+
+		<action name="bootstrapView">
+			<result>/bootstrap.jsp</result>
+		</action>
+
+		<action name="bootstrap" class="bios.Bootstrap" method="upload">
+			<result name="input">bootstrap.jsp</result>
+			<result name="success">/congrats.jsp</result>
+		</action>
+
+		<action name="bidBootstrap" class="bios.BidBootstrap">
+			<result name="input">bidBootstrap.jsp</result>
+			<result name="success">/congrats.jsp</result>
+		</action>
+
+		<action name="ajaxdemo" class="bios.AjaxTest">
+			<result name="success">/temp.jsp</result>
+		</action>
+
+
+
+		<action name="setRound" class="bios.RoundAction">
+			<result name="SUCCESS" type="redirectAction">
+				<param name="actionName">/admin/adminView.action</param>
+				<param name="message">${message}</param>
+			</result>
+		</action>
+
+		<action name="logout">
+			<result type="redirect">/secure/logout.action</result>
+		</action>
+	</package>
+</struts>

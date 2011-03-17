@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/*
+ * @twothreeone - Default Theme
+ * Author: Robert Chai
+ */
+/*****----- Standard Template Layout -----*****/
+itarea {
+	display: block;
+	float: none;
+}
+
+html {
+	background: #E6E6E6;
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+
+#displaytoprightpane {
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+
+#nametext {
+	position: absolute;
+	top: 1px;
+	left: 435px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	width: 145px;
+}
+
+#links {
+	position: relative;
+	top: 0px;
+	left: 585px;
+	font-weight: bold;
+}
+
+#links a,#links a:active,#links a:visited {
+	color: #197DDB;
+}
+
+#viewallpanel {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	background-color: #FFFFFF;
+	top: 10px;
+	left: 0px;
+	width: 720px;
+	min-height: 150px;
+	text-align: center;
+}
+
+#editBid {
+	position: relative;
+	top: 29px;
+	left: 0px;
+}
+
+.day {
+	background-color: #dbe7ec;
+}
+
+.strong {
+	font-weight: bolder;
+}
+
+td {
+	padding: 25px;
+	text-align: center;
+	vertical-align: top;
+}
+
+table {
+	margin-top: 63px;
+	margin-bottom: 10px;
+	width: 720px;
+	float: none;
+	border: 3px solid #999999;
+	font-family: Verdana, Arial;
+	font-size: 0.8em;
+}
+
+.light {
+	color: #93A2D9;
+}
+
+#errorwords {
+	position: absolute;
+	top: 115px;
+	left: 115px;
+	font-size: 35px;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: -2.5px;
+	color: #005B90;
+}
+
+#actionMessages {
+	position: relative;
+	top: 20px;
+	left: 240px;
+	width: 338px;
+	min-height: 50px;
+	padding: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+
+#backbtn {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin-top: -62px;
+	margin-left: 346px;
+	padding: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	float: right;
+	font-weight: bold;
+	background-color: #999999;
+	color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+}
+
+#backbtn:hover {
+	background-color: #005B90;
+}
+
+.drop:hover {
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+	text-indent: -40px;
+}
+
+li {
+	list-style-type: none;
+}
+
+#tableheader {
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	font-family: Verdana, Arial;
+	font-size: 40px;
+	font-weight: bold;
+	color: #999999;
+	text-align: left;
+	text-transform: lowercase;
+	letter-spacing: -2.0px;
+}
+
+#addbidlink,#addbidlink a:active,#addbidlink a:visted {
+	color: #197DDB;
+	text-decoration: none;
+}
+
+#addbidlink a:hover {
+	color: #197DDB;
+}
