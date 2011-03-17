@@ -1,0 +1,53 @@
+<%@taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="/struts-jquery-tags" prefix="sj"%>
+<%@page import="java.text.*"%>
+<%@page import="JDODataManager.*,JDOModel.*,java.util.*"%>
+
+<html>
+<head>
+<title>Welcome to Merlion University : View All Courses</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/css-display-viewallcourses.css" rel="stylesheet"
+	type="text/css" media="screen" />
+<sj:head jqueryui="true" />
+</head>
+<body>
+<div id="viewallpanel">
+<div id="displaytoprightpane"><span id="nametext">Hi <%=StudentDataManager.getStudent("fred.ng.2009").getName()%>!</span>
+</div>
+<%
+                            List<Course> allCourses = CourseDataManager.retrieveAll();
+
+                            if (!allCourses.isEmpty()) {
+                                // Print header of the table
+                                out.println("<div id='tableheader'>View All Courses</div>");
+                                out.println("<table>");
+                                out.println("<tr>");
+                                out.println("<td class='day strong'>Course Code</td>");
+                                out.println("<td class='day strong'>School</td>");
+                                out.println("<td class='day strong'>Title</td>");
+                                out.println("<td class='day strong'>Description</td>");
+                                out.println("<td class='day strong'>Exam Date</td>");
+                                out.println("<td class='day strong'>Exam Start</td>");
+                                out.println("</tr>");
+
+                                // Print data of the table
+                                for (Course course : allCourses) {
+                                    out.println("<tr>");
+                                    out.println("<td>" + course.getCourseCode() + "</td>");
+                                    out.println("<td>" + course.getSchool() + "</td>");
+                                    out.println("<td>" + course.getTitle() + "</td>");
+                                    out.println("<td>" + course.getDescription() + "</td>");
+                                    out.println("<td>" + course.getExamDate() + "</td>");
+                                    out.println("<td>" + course.getExamStart() + "</td>");
+                                    out.println("</tr>");
+                                }
+
+                                out.println("</table>");
+                            }
+                %>
+</div>
+</body>
+</html>
+
+

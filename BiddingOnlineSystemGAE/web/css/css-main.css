@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/*
+ * @twothreeone - Default Theme
+ * Author: Robert Chai
+ */
+/*****----- Standard Template Layout -----*****/
+* html .hitarea {
+	display: block;
+	float: none;
+}
+
+html {
+	background: #E6E6E6;
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+
+#centerpanel {
+	position: relative;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	top: 10px;
+	left: 0px;
+	width: 988px;
+	min-height: 580px;
+}
+
+#loginform {
+	position: absolute;
+	left: 342px;
+	top: 125px;
+}
+
+.label {
+	display: block;
+	float: right;
+	padding-right: 10px;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: #197DDB;
+}
+
+#loginform_userId,#loginform_password {
+	font-family: Calibri, Times New Roman;
+	font-size: 18px;
+	border: 1px groove #E6E6E6;
+	height: 30px;
+	width: 220px;
+}
+
+#loginform_userId:hover,#loginform_password:hover {
+	border: 1px groove #197DDB;
+	background-color: #CBE6FF;
+}
+
+#loginbtn {
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #197DDB;
+	border: none;
+	margin-top: 5px;
+	color: #FFFFFF;
+	width: 80px;
+	height: 50px;
+	font-variant: small-caps;
+}
+
+#loginbtn:hover {
+	background-color: #CBE6FF;
+}
+
+#loginleftpane {
+	position: absolute;
+	top: 0px;
+	left: -4px;
+	width: 257px;
+	height: 602px;
+	z-index: 4;
+}
+
+#logincenterlogo {
+	position: relative;
+	top: 100px;
+	left: 240px;
+	width: 668px;
+	height: 396px;
+}
+
+#logincenterlowercurve {
+	position: absolute;
+	top: 360px;
+	left: 808px;
+	width: 78px;
+	height: 220px;
+}
+
+#countdownpane {
+	position: absolute;
+	top: 35px;
+	left: 60px;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#clocktime {
+	position: absolute;
+	top: 0px;
+	left: 175px;
+	margin-top: -1px;
+	border: none;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+#copyrightpane {
+	position: relative;
+	top: 184px;
+	left: 0px;
+	z-index: 1;
+	background-color: #CBE6FF;
+	color: #999999;
+	padding: 5px;
+	padding-left: 100px;
+	padding-right: 15px;
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: bold;
+	width: 345px;
+}
+
+#errorpane {
+	position: absolute;
+	top: 408px;
+	left: 662px;
+	border-bottom: 1px solid #FF0000;
+	font-size: 12px;
+	color: #FF0000;
+	width: 216px;
+	text-align: left;
+}
+
+#errorheader {
+	position: relative;
+	font-weight: bold;
+}
+
+#errortext {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+}

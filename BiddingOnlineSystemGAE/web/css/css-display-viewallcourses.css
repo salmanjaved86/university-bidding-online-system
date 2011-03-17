@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/*
+ * @twothreeone - Default Theme
+ * Author: Robert Chai
+ */
+/*****----- Standard Template Layout -----*****/
+itarea {
+	display: block;
+	float: none;
+}
+
+html {
+	background: #E6E6E6;
+}
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #000000;
+}
+
+#displaytoprightpane {
+	position: absolute;
+	top: 12px;
+	left: 0px;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+}
+
+#nametext {
+	position: absolute;
+	top: 1px;
+	left: 528px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: right;
+	width: 180px;
+}
+
+#viewallpanel {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	background-color: #FFFFFF;
+	top: 10px;
+	left: 0px;
+	width: 720px;
+	min-height: 580px;
+	text-align: center;
+}
+
+.day {
+	background-color: #dbe7ec;
+}
+
+.strong {
+	font-weight: bolder;
+}
+
+td {
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+}
+
+table {
+	margin-top: 38px;
+	margin-bottom: 10px;
+	width: 720px;
+	float: none;
+	border: 3px solid #999999;
+	font-family: Verdana, Arial;
+	font-size: 0.8em;
+}
+
+.light {
+	color: #93A2D9;
+}
+
+#actionMessages {
+	padding: 20px;
+	border: 1px solid green;
+}
+
+.drop:hover {
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+#tableheader {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-family: Verdana, Arial;
+	font-size: 40px;
+	font-weight: bold;
+	color: #999999;
+	text-align: left;
+	text-transform: lowercase;
+}
