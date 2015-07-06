@@ -1,0 +1,3 @@
+This is the open source version of an online bidding system for classes in a university built using Struts2 (JSP). The data storage is implemented using both, MySQL and Google App Engine. Project is for reference (as there is very little code reference for GAE + Struts2 + AJAX on the web) and freely building upon this code for your own purposes.
+
+The code is not very well documented and it may take you time to understand how things work. Also, there is not much explanation I can provide to you here to get you started - just please note that there is a lot of hard work gone in developing this, and it would be a great starting point for you.
